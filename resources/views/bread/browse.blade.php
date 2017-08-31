@@ -176,7 +176,7 @@
                                     ]) }}</div>
                             </div>
                             <div class="pull-right">
-                                {{ $dataTypeContent->appends(['s' => $search])->links() }}
+                                {{ $dataTypeContent->appends((array) $search)->links() }}
                             </div>
                         @endif
                     </div>

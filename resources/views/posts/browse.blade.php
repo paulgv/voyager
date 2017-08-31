@@ -34,7 +34,7 @@
                                     @endforeach
                                 </select>
                                 <div class="input-group col-md-12">
-                                    <input type="text" class="form-control" placeholder="Search" name="s" value="{{ $search }}">
+                                    <input type="text" class="form-control" placeholder="Search" name="s" value="{{ $search->value }}">
                                     <span class="input-group-btn">
                                         <button class="btn btn-info btn-lg" type="submit">
                                             <i class="glyphicon glyphicon-search"></i>
@@ -106,7 +106,7 @@
                                     ]) }}</div>
                             </div>
                             <div class="pull-right">
-                                {{ $dataTypeContent->appends(['s' => $search])->links() }}
+                                {{ $dataTypeContent->appends((array) $search)->links() }}
                             </div>
                         @endif
                     </div>
